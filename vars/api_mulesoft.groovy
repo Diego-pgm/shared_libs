@@ -21,7 +21,11 @@ def call(apiName, boolean hasId, boolean useClient, boolean useEndpoint) {
                 stage('Prepare'){
                     steps{
                         script{
-                            echo "${params.env}"
+                            echo "Environment: ${params.env}"
+                            echo "Api Name: ${apiName}"
+                            echo "Has ID: ${hasId}"
+                            echo "Uses Client: ${useClient}"
+                            echo "Uses Endpoint: ${useEndpoint}"
                         }
                     }
                 }
