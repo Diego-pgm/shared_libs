@@ -15,7 +15,7 @@ def call(apiName, boolean hasId, boolean useClient, boolean useEndpoint) {
         pipeline{
             agent any
             options {
-                buildDiscarder(logRotator(numToaKeepStr: '5'))
+                buildDiscarder(logRotator(numToKeepStr: '5'))
             }
             stages{
                 stage('Prepare'){
